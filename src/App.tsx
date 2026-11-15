@@ -95,7 +95,7 @@ function App() {
   </div>
 }
 
-function PageHeading({eyebrow,title,description,action}:{eyebrow:string;title:string;description:string;action?:React.ReactNode}) {
+function PageHeading({eyebrow,title,description,action}:{eyebrow:string;title:React.ReactNode;description:string;action?:React.ReactNode}) {
   return <div className="page-heading"><div><div className="eyebrow"><Sparkles size={13}/>{eyebrow}</div><h1>{title}</h1><p>{description}</p></div>{action && <div className="heading-action">{action}</div>}</div>
 }
 function Overview({go,savedCount,projects}:{go:(p:Page)=>void;savedCount:number;projects:Project[]}) {
